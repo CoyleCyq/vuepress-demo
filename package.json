@@ -1,0 +1,26 @@
+{
+  "name": "coyle-blog",
+  "version": "1.0.0",
+  "description": "coyle的博客",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "sh": "bash deploy.sh"
+  },
+  "keywords": [
+    "docs",
+    "coyle"
+  ],
+  "author": "coyle",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.10.0",
+    "sass-loader": "^7.1.0",
+    "vuepress": "^0.14.10",
+    "webpack-dev-middleware": "^3.6.1"
+  }
+}
