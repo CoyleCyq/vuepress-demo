@@ -34,11 +34,11 @@ module.exports = {
           collapsable: false,
           children: genSidebarConfig("javascript/jsBasic", true)
         },
-        {
-          title: "笔记",
-          collapsable: true,
-          children: genSidebarConfig("javascript/note", true)
-        }
+        // {
+        //   title: "笔记",
+        //   collapsable: true,
+        //   children: genSidebarConfig("javascript/note", true)
+        // }
         // {
         //   title: "案例",
         //   collapsable: true,
