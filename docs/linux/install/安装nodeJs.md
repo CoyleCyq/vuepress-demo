@@ -1,6 +1,8 @@
 # node 安装
 ## 简介
-本文档记录CentOS7 安装 node v10.13.3 版本
+本文档记录了 `linux` 系统 `CentOS7` 安装 `node v10.15.3` 版本
+
+<src-BackToTop></src-BackToTop>
 
 ## 下载
 ```bash

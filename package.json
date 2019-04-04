@@ -15,11 +15,19 @@
     "docs",
     "coyle"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CoyleCyq/vuepress-demo.git"
+  },
   "author": "coyle",
   "license": "ISC",
   "devDependencies": {
+    "element-ui": "^2.7.0",
+    "highlight.js": "^9.15.6",
     "node-sass": "^4.10.0",
     "sass-loader": "^7.1.0",
+    "vue": "^2.6.10",
+    "vue-highlight.js": "^3.1.0",
     "vuepress": "^0.14.10",
     "webpack-dev-middleware": "^3.6.1"
   }
