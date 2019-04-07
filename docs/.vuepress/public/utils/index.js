@@ -1,6 +1,23 @@
 /**
- * Created by jiachenpan on 16/11/18.
+ * Created by coyle on 2019-04-05
  */
+
+/**
+ * [随机生成一个rgb颜色]
+ * @return {String} [返回一个颜色：rgb(255,205,205)]
+ */
+export function randomColor() {
+  var r = parseInt(Math.random() * 256)
+	var g = parseInt(Math.random() * 256)
+	var b = parseInt(Math.random() * 256)
+	// 拼接css样式
+	var rgb = 'rgb(' + r + ',' + g + ',' + b + ')'
+	return rgb
+}
+
+export function randomNum(min, max) {
+  return parseInt(Math.random() * (max - min + 1)) + min;
+}
 
 export function parseTime(time, cFormat) {
   if (arguments.length === 0) {
@@ -287,6 +304,11 @@ export function deepClone(source) {
   return targetObj
 }
 
+/**
+ * 数组去重
+ * @param arr {Array} 目标数组
+ * @returns {array}
+ */
 export function uniqueArr(arr) {
   return Array.from(new Set(arr))
 }

@@ -36,6 +36,7 @@ export default {
           height: '40px',
           'border-radius': '4px',
           'line-height': '45px',
+          'z-index': 9999,
           background: '#e7eaf1'
         }
       }
@@ -55,6 +56,8 @@ export default {
   },
   mounted() {
     window.addEventListener('scroll', this.handleScroll)
+    // let descriptDom = document.querySelector('meta[name="description"]')
+    // descriptDom.setAttribute('content', 'javascript, node, linux')
     console.log(this)
   },
   beforeDestroy() {
