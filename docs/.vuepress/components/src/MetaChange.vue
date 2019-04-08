@@ -8,28 +8,18 @@ export default {
   props: {
     descript: {
       type: String,
-      default: 'javascript, vue, node, linux, vuepress'
+      default: 'coyle的博客'
+    },
+    keyword: {
+      type: String,
+      default: ''
     }
   },
   mounted() {
     const descriptDom = document.querySelector('meta[name="description"]')
-    const pageInfo = this.$page
-    let description = ''
-    if (pageInfo.headers) {
-      let descriptArr = []
-      for (let value of pageInfo.headers) {
-        descriptArr.push(value.title)
-      }
-      description = descriptArr.join(',')
-    } else if (pageInfo.title) {
-      description = pageInfo.title
-    } else {
-      description = ''
-    }
-    console.log(description)
     setTimeout(()=> {
-      descriptDom.setAttribute('content', this.descript + ', ' + description)
-    }, 1000)
+      descriptDom.setAttribute('content', this.descript)
+    }, 50)
     
   },
   computed: {
