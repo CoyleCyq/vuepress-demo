@@ -21,5 +21,23 @@
 <br>
 
 <src-MdInput value="" icon="search" name="title" placeholder="输入标题">标题</src-MdInput>
+<br/>
+<src-MetaChange descript="vue组件测试使用"></src-MetaChange>
+<br/>
+<src-MallKi class-name="mallki-text" text="test"/>
+<br>
+<example-test></example-test>
+<br>
+<src-Test>
+  <input type="text" name="name" autocomplete="off" placeholder="说点什么吧" /> 
+</src-Test>
 
-<src-MetaChange descript="javascript, node, linux, vue"></src-MetaChange>
+<el-pagination
+  small
+  layout="prev, pager, next"
+  :total="100">
+</el-pagination>
+
+<br>
+
+<src-Pagination :total="100" ></src-Pagination> 

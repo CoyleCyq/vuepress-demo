@@ -10,5 +10,5 @@ features:
   details: 基于 vue 封装的组件, 借鉴 elementUI 
 - title: linux 学习笔记
   details:  自学 Linux , 软件安装及命令行使用 
-footer: MIT Licensed | Copyright © 2019-present 粤ICP备18008408号-1
+footer: MIT Licensed | Copyright © 2019-present coyle
 ---

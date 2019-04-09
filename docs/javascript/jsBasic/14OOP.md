@@ -17,7 +17,6 @@
 - [匿名函数](#匿名函数)
 - [ES5对象扩展](#ES5对象扩展)
 
-<src-BackToTop></src-BackToTop>
 <src-MetaChange></src-MetaChange>
 
 ## 了解面向对象

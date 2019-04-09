@@ -15,7 +15,6 @@
     - [拖拽的原理](#拖拽的原理)
     - [拖拽的思路](#拖拽的思路)
 
-<src-BackToTop></src-BackToTop>
 <src-MetaChange></src-MetaChange>
 
 ## 什么是事件

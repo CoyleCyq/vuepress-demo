@@ -8,7 +8,6 @@
     - [属性对象](#属性对象)
 - [window对象常用事件](#window对象常用事件)
 
-<src-BackToTop></src-BackToTop>
 <src-MetaChange></src-MetaChange>
 
 ## BOM的概念

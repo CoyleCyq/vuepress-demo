@@ -8,7 +8,6 @@
     - [正则的属性和方法](#正则的属性和方法)
     - [匹配规则](#匹配规则)
 
-<src-BackToTop></src-BackToTop>
 <src-MetaChange></src-MetaChange>
 
 ## 了解正则表达式

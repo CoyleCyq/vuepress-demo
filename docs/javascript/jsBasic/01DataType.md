@@ -8,7 +8,6 @@
 - [数据类型](#数据类型)
 - [运算符](#运算符)
 
-<src-BackToTop></src-BackToTop>
 <src-MetaChange></src-MetaChange>
 
 ## 历史

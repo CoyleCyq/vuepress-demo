@@ -17,7 +17,6 @@
     - [使用](#使用)
     - [应用](#应用)
 
-<src-BackToTop></src-BackToTop>
 <src-MetaChange></src-MetaChange>
 
 ## 了解AJAX

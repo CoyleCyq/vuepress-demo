@@ -16,7 +16,6 @@
     - [继承](#继承)
     - [静态方法](#静态方法)
 
-<src-BackToTop></src-BackToTop>
 <src-MetaChange></src-MetaChange>
 
 ## 闭包

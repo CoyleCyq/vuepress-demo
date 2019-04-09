@@ -21,7 +21,6 @@
   - [内建对象](#内建对象)
   - [apply和call](#apply和call)
 
-<src-BackToTop></src-BackToTop>
 <src-MetaChange></src-MetaChange>
 
 ## 数组

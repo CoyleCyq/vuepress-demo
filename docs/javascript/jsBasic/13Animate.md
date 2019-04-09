@@ -11,7 +11,6 @@
 - [链式运动](#链式运动)
 - [无缝滚动](#无缝滚动)
 
-<src-BackToTop></src-BackToTop>
 <src-MetaChange></src-MetaChange>
 
 ## 运动原理

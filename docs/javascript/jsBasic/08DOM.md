@@ -18,7 +18,6 @@
     - [tr属性方法](tr属性方法)
     - [td属性方法](#td属性方法)
 
-<src-BackToTop></src-BackToTop>
 <src-MetaChange></src-MetaChange>
 
 ## 什么是DOM

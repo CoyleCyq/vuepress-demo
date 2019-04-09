@@ -1,16 +1,16 @@
 const path = require('path');
 const fs = require('fs');
 
-// const description = ['种一棵树最好的时间是十年前，其次是现在', '少壮不努力, 老大徒伤悲', '多少事，从来急；天地转，光阴迫。一万年太久，只争朝夕。', '凡是过去, 皆为序章', '将相本无主，男儿当自强', '人生太短，要干的事太多，我要争分夺秒。'];
-
 module.exports = {
   title: "coyle-blog",
   description: '多少事，从来急；天地转，光阴迫。一万年太久，只争朝夕。',
-  head: [
+  head: [ // 额外的需要被注入到当前页面的 HTML <head> 中的标签, 下面的是 favicon
     ['link', { rel: 'icon', href: '/img/favicon.ico' }]
   ],
+  // extend: '@vuepress/theme-default',
   themeConfig: {
-    sidebarDepth: 3,
+    lastUpdated: 'Last Updated', // 最后更新时间
+    sidebarDepth: 2, // 侧边栏搜索深度，将同时提取 h2 和 h3 标题。
     nav: [
       {
         text: 'JavaScript',
@@ -70,6 +70,19 @@ module.exports = {
     }
   },
   sass: { indentedSyntax: true },
+  markdown: {
+    lineNumbers: true // 代码块显示行号
+  },
+  plugins: {
+    '@vuepress/pwa': {
+      serviceWorker: true,
+      popupComponent: 'MySWUpdatePopup',
+      updatePopup: {
+        message: "新的风暴已经出现",
+        buttonText: "盘他"
+      }
+    }
+  }
 };
 
 function genSidebarConfig(dir, hasSub) {

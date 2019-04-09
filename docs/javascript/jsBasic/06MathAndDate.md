@@ -10,7 +10,6 @@
   - [日期处理](#日期处理)
   - [延迟与定时器](#延迟与定时器)
 
-<src-BackToTop></src-BackToTop>
 <src-MetaChange></src-MetaChange>
 
 ## Math对象

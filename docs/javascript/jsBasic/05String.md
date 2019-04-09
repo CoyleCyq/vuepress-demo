@@ -10,7 +10,6 @@
 - [ECMAscript5新增](#ECMAscript5新增)
 - [ASCII码和字符集](#ASCII码和字符集)
 
-<src-BackToTop></src-BackToTop>
 <src-MetaChange></src-MetaChange>
 
 ## 了解字符串

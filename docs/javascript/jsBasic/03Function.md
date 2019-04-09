@@ -12,7 +12,6 @@
 - [回调函数](#回调函数)
 - [即时执行函数](#即时执行函数)
 
-<src-BackToTop></src-BackToTop>
 <src-MetaChange></src-MetaChange>
 
 ## 了解函数

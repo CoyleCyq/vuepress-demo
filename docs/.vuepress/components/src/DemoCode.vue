@@ -1,16 +1,16 @@
 <template>
   <div class="code">
-    <div class="code-demo">
-      <div class="code-content">
+    <div class="code--demo">
+      <div class="code--content">
         <slot></slot>
       </div>
     </div>
     <el-collapse-transition>
-      <div v-show="isShow" class="code-segment">
+      <div v-show="isShow" class="code--segment">
         <slot name="codeText"></slot>
       </div>
     </el-collapse-transition>
-    <div v-if="$slots.codeText" class="code-button" @click="handleToggleShow">{{ codeTextBtn }}</div>
+    <div v-if="$slots.codeText" class="code--button" @click="handleToggleShow">{{ codeTextBtn }}</div>
   </div>
 </template>
 
@@ -37,11 +37,11 @@ export default {
 
 <style lang="scss" scoped>
 .code {
-  .code-demo {
+  .code--demo {
     border: 1px solid #ebebeb;
     border-bottom: none;
     border-radius: 4px 4px 0 0;
-    .code-content {
+    .code--content {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -49,7 +49,7 @@ export default {
       padding: 4%;
     }
   }
-  .code-button {
+  .code--button {
     border: 1px solid #ebebeb;
     color: #409eff;
     font-weight: 400;
