@@ -135,8 +135,8 @@
     }
 
     // 放大镜
-    $.fn.coyleZoom = function() {
-        var defaults = {
+	$.fn.coyleZoom = function(options) {
+		var defaults = {
 			width: 400, //大图宽度，高度
 			height: 300,
 			position: 'right',//大图显示位置：left,bottom,top,right
