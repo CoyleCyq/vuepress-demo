@@ -1,4 +1,4 @@
-# 14 动画
+# 13 动画
 - [运动原理](#运动原理)
 - [运动分类](#运动分类)
     - [匀速运动](#匀速运动) 
@@ -18,12 +18,143 @@
 ## 运动分类
 ### 匀速运动
 速度保持不变的运动
+
+```html
+<!-- 匀速运动案例 -->
+<!-- html -->
+<style>
+    .bird{position: absolute;left:0;top:0;}
+</style>
+
+<img src="img/bird.gif" class="bird">
+```
+
+<br>
+
+```js
+// js
+document.addEventListener('DOMContentLoaded',() => {
+    let bird = document.querySelector('.bird');
+    // 匀速运动
+    // * 从左往右
+    // * 不断改变bird的left值
+    // * 定时器
+    let speed = 5;
+    let timer = setInterval(() => {
+        // 获取当前left值
+        // let currentLeft = parseFloat(getComputedStyle(bird).left);
+        let currentLeft = bird.offsetLeft;
+
+        // 停止动画
+        // 清除定时器
+        if (currentLeft >= window.innerWidth-bird.offsetWidth) {
+            clearInterval(timer);
+
+
+            currentLeft = window.innerWidth - bird.offsetWidth - speed;
+        }
+
+        bird.style.left = currentLeft + speed + 'px';
+    }, 30);
+});
+```
 ### 加速运动
 速度不断增加的运动
+
+```js
+// 加速运动案例
+document.addEventListener('DOMContentLoaded',()=>{
+    /*
+        加速运动：
+        篮球自由落体
+        */
+    let basketball = document.querySelector('.basketball');
+
+    // 
+    let speed = 0;
+    let timer = setInterval(() => {
+        speed += 5;
+
+        let top = basketball.offsetTop;
+
+        // 到达地面停止
+        if (top >= window.innerHeight-basketball.offsetHeight) {
+            clearInterval(timer);
+
+            top = window.innerHeight - basketball.offsetHeight - speed;
+        }
+
+        basketball.style.top = top + speed + 'px';
+    }, 30);
+});
+```
 ### 减速运动
 速度不断减小的运动
+```js
+document.addEventListener('DOMContentLoaded',()=>{
+    /*
+        减速运动：
+        刹车效果
+        */
+    let car = document.querySelector('.car');
+
+    // 初始速度
+    let speed = 100;
+    let timer = setInterval(() => {
+        speed -= 5;
+
+        let left = car.offsetLeft;
+
+        if (speed <= 0) {
+            clearInterval(timer);
+            left = left - speed;
+
+            // 停止音乐播放
+            // ...
+        }
+
+        car.style.left = left + speed + 'px';
+    }, 30);
+
+    // 播放刹车声音
+    // ...
+});
+```
+
 ### 抛物线运动
 水平方向速度不断减小，垂直方向速度不断增加
+
+```js
+document.addEventListener('DOMContentLoaded',()=>{
+    /*
+        抛物线运动：
+        */
+    let basketball = document.querySelector('.basketball');
+
+    // 水平速度：匀速
+    let xspeed = 30;
+
+    // 垂直速度：加速
+    let yspeed = 0;
+    let timer = setInterval(() => {
+        yspeed += 5;
+
+        let top = basketball.offsetTop;
+        let left = basketball.offsetLeft;
+
+        // 到达地面停止
+        if (top >= window.innerHeight - basketball.offsetHeight) {
+            clearInterval(timer);
+
+            top = window.innerHeight - basketball.offsetHeight - speed;
+        }
+
+        basketball.style.top = top + yspeed + 'px';
+        basketball.style.left = left + xspeed + 'px';
+    }, 30);
+});
+```
+
 
 [案例]
 
@@ -42,6 +173,45 @@
 
 ### 圆周运动
 具体在以某点为圆心半径为r的圆周上的运动叫“圆周运动”
+
+```js
+document.addEventListener('DOMContentLoaded',()=>{
+    let circle = document.querySelector('.circle');
+    let ball = document.querySelector('.ball');
+
+    // 大圆半径
+    let r = 200;
+
+    // 小圆半径
+    let mr = 15;
+
+    // 大圆圆心
+    let center = { x: window.innerWidth / 2, y: window.innerHeight / 2 }
+
+    // 把大圆定位到页面中心
+    circle.style.left = (window.innerWidth - circle.offsetWidth) / 2 + 'px';
+    circle.style.top = (window.innerHeight - circle.offsetHeight) / 2 + 'px';
+
+    // 小圆初始位置（角度）
+    let deg = 0;
+
+    let timer = setInterval(() => {
+        // 小圆每次走动的角度
+        deg += 2;
+
+        // 计算弧度
+        let rad = deg * Math.PI / 180;
+
+        let a = center.x + r * Math.cos(rad);
+        let b = center.y + r * Math.sin(rad);
+
+        ball.style.left = a - mr + 'px';
+        ball.style.top = b - mr + 'px';
+    }, 30)
+});
+```
+
+[圆周运动效果](https://cyq0802.xin/demo/jsDemo/circle.html)
 
 ## 盒模型
 - `offset`

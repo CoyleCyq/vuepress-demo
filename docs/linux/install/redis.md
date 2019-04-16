@@ -1,29 +1,18 @@
 # CentOS7 安装redis
 安装redis 是因为有一些情况需要以redis为环境，所以没有仔细深究配置，只记录安装和启动
 
-## 下载
-```bash
-$ wget http://download.redis.io/releases/redis-4.0.8.tar.gz # 下载资源
-$ tar xzvf redis-4.0.8.tar.gz # 解压
-```
 ## 安装
 ```bash
-$ cd redis-4.0.8 # 进入该目录
-$ make # 安装
-$ cd src # 进入src 文件夹
-$ make install PREFIX=/usr/local/redis # 安装
-$ cd ../ # 返回上一级文件
-$ mkdir /usr/local/redis/etc # 建立文件夹
-$ mv redis.conf /usr/local/redis/etc # 移动文件
-$ vi /usr/local/redis/etc/redis.conf # 查看 该文件
-# 将daemonize no 改成daemonize yes 配置redis为后台启动
-$ vi /etc/rc.local # 查看该文件
-# 在最后一行 添加 /usr/local/redis/bin/redis-server /usr/local/redis/etc/redis.conf 将redis加入到开机启动
-$ /usr/local/redis/bin/redis-server /usr/local/redis/etc/redis.conf # 启动
+$ whereis redis-cli # 检查有没有安装redis-cli
+$ whereis redis-server # 检查有没有安装redis-server
+$ yum install -y redis # 安装redis
+$ redis-server & # 加上`&`号使redis以后台程序方式运行
 ```
 
 ## 常用命令
 ```bash
+$ ps -ef |grep redis # 检测后台进程是否存在
+$ netstat -lntp | grep 6379 # 检测6379端口是否在监听
 $ redis-server /usr/local/redis/etc/redis.conf # 启动redis
 $ pkill redis # 停止
 $ rm -rf /usr/local/redis # 删除安装目录 
