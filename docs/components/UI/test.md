@@ -37,7 +37,3 @@
   layout="prev, pager, next"
   :total="100">
 </el-pagination>
-
-<br>
-
-<src-Pagination :total="100" ></src-Pagination> 

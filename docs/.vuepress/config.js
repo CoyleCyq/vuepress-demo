@@ -2,8 +2,8 @@ const path = require('path');
 const fs = require('fs');
 
 module.exports = {
-  title: "coyle-blog",
-  description: '多少事，从来急；天地转，光阴迫。一万年太久，只争朝夕。',
+  title: "coyle-docs",
+  description: 'coyle的文档',
   head: [ // 额外的需要被注入到当前页面的 HTML <head> 中的标签, 下面的是 favicon
     ['link', { rel: 'icon', href: '/img/favicon.ico' }]
   ],
@@ -17,8 +17,8 @@ module.exports = {
         link: '/javascript/introduction'
       },
       {
-        text: 'Vue组件',
-        link: '/components/introduction'
+        text: 'Node',
+        link: '/node/introduction'
       },
       {
         text: 'Linux',
@@ -51,12 +51,17 @@ module.exports = {
           children: genSidebarConfig("javascript/demoDoc", true)
         }
       ],
-      "/components/": [
+      "/node/": [
         "introduction",
         {
-          title: "UI组件",
+          title: "模块API",
           collapsable: false,
-          children: genSidebarConfig("components/UI", true)
+          children: genSidebarConfig("node/moduleAPI", true)
+        },
+        {
+          title: "egg",
+          collapsable: false,
+          children: genSidebarConfig("node/egg", true)
         },
       ],
       "/linux/": [
@@ -70,9 +75,9 @@ module.exports = {
     }
   },
   sass: { indentedSyntax: true },
-  markdown: {
-    lineNumbers: true // 代码块显示行号
-  },
+  // markdown: {
+  //   lineNumbers: true // 代码块显示行号
+  // },
   plugins: {
     '@vuepress/pwa': {
       serviceWorker: true,
@@ -81,6 +86,9 @@ module.exports = {
         message: "新的风暴已经出现",
         buttonText: "盘他"
       }
+    },
+    '@vuepress/google-analytics': {
+      ga: 'UA-138698333-1'
     }
   }
 };

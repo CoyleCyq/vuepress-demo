@@ -1,14 +1,14 @@
 ---
 home: true
 heroImage: ./img/avatar.jpg
-actionText: javascript 笔记 →
+actionText: JavaScript →
 actionLink: /javascript/introduction
 features:
-- title: javascript 笔记
-  details: 学习 JavaScript 时遇到的问题以及笔记 
-- title: vue 组件 demo
-  details: 基于 vue 封装的组件, 借鉴 elementUI 
-- title: linux 学习笔记
-  details:  自学 Linux , 软件安装及命令行使用 
+- title: JavaScript
+  details: JavaScript 常用 API, 语法, 问题记录, 案例分享
+- title: Node
+  details: NodeJS 常用 API 学习笔记, 知识备忘
+- title: Linux 
+  details:  Linux 学习笔记, 安装教程
 footer: MIT Licensed | Copyright © 2019-present coyle
 ---
