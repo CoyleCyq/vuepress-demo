@@ -1,4 +1,4 @@
-### 导读 
+# 导读 
 `JavaScript` 一种 `解释型` 脚本语言，是一种 `动态类型` 、`弱类型`、`基于原型` 的语言，内置支持类型。它的解释器被称为JavaScript引擎，为浏览器的一部分，广泛用于客户端的脚本语言，最早是在HTML（标准通用标记语言下的一个应用）网页上使用，用来给HTML网页增加动态功能。
 
 JavaScript 是一种轻量级的脚本语言。所谓“脚本语言”（script language），指的是它不具备开发操作系统的能力，而是只用来编写控制其他大型应用程序（比如浏览器）的“脚本”。
@@ -7,7 +7,7 @@ JavaScript 也是一种嵌入式（embedded）语言。它本身提供的核心�
 
 目前，已经嵌入 JavaScript 的宿主环境有多种，最常见的环境就是`浏览器`，另外还有服务器环境，也就是 `Node 项目`。
 
-### 常用工具
+## 常用工具
 - [codepen-在线编辑器](https://codepen.io/)
 - [CSS兼容性查询](https://caniuse.com/)
 - [浏览器兼容查询](https://browserl.ist/?q=last%204%20version)
@@ -17,7 +17,7 @@ JavaScript 也是一种嵌入式（embedded）语言。它本身提供的核心�
 - [在线生成二维码](https://cli.im/)
 - [在线压缩图片](https://tinypng.com/)
 
-### 学习链接
+## 学习链接
 - [JavaScript教程-w3cSchool](http://www.w3school.com.cn/js/index.asp)
 - [JavaScript教程-廖雪峰](https://www.liaoxuefeng.com/wiki/1022910821149312)
 - [JavaScript-阮一峰](http://www.ruanyifeng.com/blog/javascript/)

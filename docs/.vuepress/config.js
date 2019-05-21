@@ -17,6 +17,10 @@ module.exports = {
         link: '/javascript/introduction'
       },
       {
+        text: 'Vue',
+        link: '/vue/introduction'
+      },
+      {
         text: 'Node',
         link: '/node/introduction'
       },
@@ -71,6 +75,14 @@ module.exports = {
           collapsable: false,
           children: genSidebarConfig("linux/install", true)
         },
+      ],
+      "/vue/":[
+        "introduction",
+        {
+          title: 'vue基础',
+          collapsable: false,
+          children: genSidebarConfig("vue/vueBasic", true)
+        }
       ]
     }
   },
@@ -87,9 +99,9 @@ module.exports = {
         buttonText: "盘他"
       }
     },
-    '@vuepress/google-analytics': {
-      ga: 'UA-138698333-1'
-    }
+    // '@vuepress/google-analytics': {
+    //   ga: 'UA-138698333-1'
+    // }
   }
 };
 
