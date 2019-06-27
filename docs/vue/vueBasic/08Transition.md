@@ -207,7 +207,8 @@ v-for 生成列表过渡效果要使用组件 `transition-group`，组件提供�
     })
 </script>
 ```
-[效果预览](https://github.com/CoyleCyq/Learning-notes/tree/master/Vue/VueBasic/Transition/06-列表的进入和离开过渡.html)
+### 列表过渡效果预览
+<example-vue-listtranstion/>
 
 ## 自定义过渡的类名
 我们可以通过以下特性来自定义过渡类名：
@@ -237,7 +238,9 @@ v-for 生成列表过渡效果要使用组件 `transition-group`，组件提供�
     })
 </script>
 ```
-[效果预览](https://github.com/CoyleCyq/Learning-notes/tree/master/Vue/VueBasic/Transition/07-自定义过渡的类名.html)
+### 自定义过渡效果预览
+<example-vue-animatetrans/>
+
 
 ## 过渡效果钩子函数
 除了用CSS过渡的动画来实现vue的组件过渡，还可以用JavaScript的钩子函数来实现，在钩子函数中直接操作DOM。我们可以在属性中声明以下钩子：

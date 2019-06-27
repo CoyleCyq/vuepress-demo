@@ -12,6 +12,9 @@
 	<global-component></global-component>
 </div>
 ```
+
+<br>
+
 ```js
 // 组件的定义 Vue.component(组件名称, {template})
 Vue.component('global-component', {

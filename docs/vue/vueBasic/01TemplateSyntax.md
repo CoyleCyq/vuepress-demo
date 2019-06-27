@@ -45,7 +45,9 @@ var vm = new Vue({
   }
 })
 ```
-[插值效果预览](https://github.com/CoyleCyq/Learning-notes/tree/master/Vue/VueBasic/TemplateSyntax/Interpolations.html)
+### 插值效果预览
+
+<example-vue-interpolations/>
 
 ## 缩写
 ### v-bind 缩写
@@ -159,9 +161,9 @@ var vm = new Vue({
     </div>
 
     <!--
-      data = {name: 'dk', age: 18} 
+      data = {name: 'coyle', age: 18} 
       结果会生成 data 属性个数 个 div，
-      value 的值分类为 dk, 18 
+      value 的值分类为 coyle, 18 
       key 的值分别为 name, age
     -->
     <div v-for="(value, key) in data">
@@ -174,7 +176,7 @@ var vm = new Vue({
     </div>
 
     <!--
-      data = [{name: 'dk1', age: 18}, {name: 'dk2', age: 20}] 
+      data = [{name: 'coyle1', age: 18}, {name: 'coyle2', age: 20}] 
       结果会生成 data.length 个 div，
       obj 的值分类为 data[0], data[1] 
       index 的值分别为0, 1
@@ -251,6 +253,8 @@ var vm = new Vue({
   </tbody>
 </table>
 
-[指令效果预览](https://github.com/CoyleCyq/Learning-notes/tree/master/Vue/VueBasic/TemplateSyntax/Directives.html)
+### 指令效果预览
+<example-vue-directives/>
 
-[综合案例预览](https://github.com/CoyleCyq/Learning-notes/tree/master/Vue/VueBasic/TemplateSyntax/Example.html)
+### 综合案例预览
+<example-vue-temp/>

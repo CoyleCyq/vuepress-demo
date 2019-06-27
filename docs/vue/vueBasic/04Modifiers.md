@@ -11,13 +11,14 @@
 	<!--事件只作用本身.self，类似于已阻止事件冒泡-->
 	<div id="div7" class="stop" @click.self="event1(7)">
 	<!--阻止浏览器默认行为.prevent-->
-	<a href="https://github.com/dk-lan" target="_blank" @click.prevent="prevent">dk's github</a>
+	<a href="https://github.com/CoyleCyq" target="_blank" @click.prevent="prevent">CoyleCyq's github</a>
 	<!--只作用一次.once-->
-	<a href="https://github.com/dk-lan" target="_blank" @click.once="prevent">dk's github</a>
+	<a href="https://github.com/CoyleCyq" target="_blank" @click.once="prevent">CoyleCyq's github</a>
 	<!--修饰符可以串联.click.prevent.once-->
-	<a href="https://github.com/dk-lan" target="_blank" @click.prevent.once="prevent">dk's github</a>
+	<a href="https://github.com/CoyleCyq" target="_blank" @click.prevent.once="prevent">CoyleCyq's github</a>
 ```
-[事件修饰符效果预览](https://github.com/CoyleCyq/Learning-notes/tree/master/Vue/VueBasic/Modifiers/eventModifiers.html)
+### 事件修饰符效果预览
+<example-vue-eventmod/>
 
 ## 按键修饰符
 ```html
@@ -38,7 +39,8 @@
     </fieldset> 
 </div>
 ```
-[按键修饰符效果预览](https://github.com/CoyleCyq/Learning-notes/tree/master/Vue/VueBasic/Modifiers/keypress.html)
+### 按键修饰符效果预览
+<example-vue-keypress/>
 
 ## 表单修饰符
 ```html
@@ -49,4 +51,5 @@
 	<!-- 自动过滤用户输入的首尾空格 -->
 	<input v-model.trim="counter">  
 ```
-[表单修饰符效果预览](https://github.com/CoyleCyq/Learning-notes/tree/master/Vue/VueBasic/Modifiers/form.html)
+### 表单修饰符效果预览
+<example-vue-form/>

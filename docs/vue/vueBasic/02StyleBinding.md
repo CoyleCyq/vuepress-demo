@@ -15,6 +15,7 @@ v-bind:class="{样式名: 结果为 boolean 的表达式}"，表达式结果为 
   <div :class="classObject"></div>
 ```
 <br>
+
 ```js
 data: {
   classObject: {
@@ -32,6 +33,9 @@ data: {
 ```html
   <div :class="classObjectComputed"></div>
 ```
+
+<br/>
+
 ```js
 computed: {
   classObjectComputed: function(){
@@ -53,6 +57,7 @@ v-bind:class="[]"，数组元素可以为表达式，也可以为字符串，如
   <div :class="[class1, class2, 'className3', active ? 'className4' : '']"></div>
 ```
 <br>
+
 ```js
 data: {
   class1: 'className1',
@@ -80,6 +85,9 @@ data: {
 ```html
   <div :style="{color: color, fontSize: fontSize, backgroundColor: '#ccc'}"></div>
 ```
+
+<br>
+
 ```js
 data: {
     color: 'red',
@@ -94,6 +102,8 @@ data: {
 ```html
   <div :style="[styleObject, {backgroundColor: '#ccc'}]"></div>
 ```
+<br>
+
 ```js
 data: {
   styleObject: {

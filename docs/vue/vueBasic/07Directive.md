@@ -10,6 +10,9 @@
 	<input type="text" value="" v-global />
 </div>
 ```
+
+<br>
+
 ```js
 // 注册一个全局自定义指令 v-global，指令名称不用加前缀 v-
 // 当元素使用了 v-global 这个指令时会触发对应的 function
