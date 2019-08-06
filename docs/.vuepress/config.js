@@ -29,6 +29,10 @@ module.exports = {
         link: '/linux/introduction'
       },
       {
+        text: '小工具',
+        link: '/tools/introduction'
+      },
+      {
         text: '了解更多',
         items: [
           { text: 'Github', link: 'https://github.com/CoyleCyq' },
@@ -82,6 +86,14 @@ module.exports = {
           title: 'vue基础',
           collapsable: false,
           children: genSidebarConfig("vue/vueBasic", true)
+        }
+      ],
+      "/tools/":[
+        "introduction",
+        {
+          title: '小工具',
+          collapsable: false,
+          children: genSidebarConfig("tools/mytools", true)
         }
       ]
     }
