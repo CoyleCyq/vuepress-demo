@@ -599,23 +599,62 @@ export default {
     getColor(level) {
       return {
         '闪耀': 'bg-sy',
+        '闪耀卡': 'bg-sy',
         '非凡': 'bg-ff',
+        '非凡卡': 'bg-ff',
+        '限定非凡卡': 'bg-ff',
         '稀有': 'bg-xy',
+        '稀有卡': 'bg-xy',
+        '限定稀有卡': 'bg-xy',
         '普通': ''
       }[level]
     },
-    // 迷阁抽奖公用方法
-    migeCommon(status) {
-      var numList = []
-      const resList = []
+    // 获取指定随机数
+    getRandomFrom(min, max) {
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    },
+    // 获取随机数
+    getRandomNumber(status) {
+      let numList = []
       if (status === 'single') {
         numList.push(Math.floor(Math.random() * 10000) / 100)
-      } else if (status === 'ten') {
-        for (let i = 0; i < 10; i++) {
+      } else if (status === 'three') {
+        for (let i = 0; i < 3; i++) {
           numList.push(Math.floor(Math.random() * 10000) / 100)
         }
+      } else if (status === 'ten') {
+        let num = this.getRandomFrom() * 10000 / 100
+        for (let i = 0; i < 9; i++) {
+          numList.push(Math.floor(Math.random() * 10000) / 100)
+        }
+
       }
-      console.log(numList)
+      return numList
+    },
+    // 渲染
+    renderAlert(list) {
+      let msg = ''
+      for (const item of list) {
+        if (item.level.indexOf('卡') > -1) {
+          msg += `<div class="${this.getColor(item.level)}">抽到${item.level}（设计师之影）一件, ${item.name}</div>`
+        } else {
+          msg += `<div class="${this.getColor(item.level)}">抽到${item.level}品质服装一件, ${item.name}</div>`
+        }
+      }
+      if (list.length > 1) {
+        this.$alert(msg, '奖励列表', {
+          dangerouslyUseHTMLString: true,
+          customClass: 'lotteryAlert'
+        });
+      } else {
+        this.$message({ dangerouslyUseHTMLString: true, message: msg })
+      }
+    },
+    // 迷阁抽奖公用方法
+    migeCommon(status) {
+      const numList = this.getRandomNumber(status)
+      const resList = []
+      // console.log(numList)
       numList.forEach((item, i) => {
         var str = ''
         if (item <= 94.40) {
@@ -636,7 +675,6 @@ export default {
     mige(status) {
       const resList = this.migeCommon(status)
       const list = []
-      let msg = ''
       for (const res of resList) {
         for (const info of this.migeList) {
           if (res === info.level) {
@@ -646,23 +684,13 @@ export default {
           }
         }
       }
-      for (const item of list) {
-        msg += `<div class="${this.getColor(item.level)}">抽到${item.level}品质服装一件, ${item.name}</div>`
-      }
-      this.$message({ dangerouslyUseHTMLString: true, message: msg })
+      this.renderAlert(list)
     },
     // 幻阁抽奖公用方法
     huangeCommon(status) {
-      var numList = []
+      const numList = this.getRandomNumber(status)
       const resList = []
-      if (status === 'single') {
-        numList.push(Math.floor(Math.random() * 10000) / 100)
-      } else if (status === 'ten') {
-        for (let i = 0; i < 10; i++) {
-          numList.push(Math.floor(Math.random() * 10000) / 100)
-        }
-      }
-      console.log(numList)
+      // console.log(numList)
       numList.forEach((item, i) => {
         var str = ''
         if (item <= 62.80) {
@@ -688,7 +716,6 @@ export default {
     huange(status) {
       const resList = this.huangeCommon(status)
       const list = []
-      let msg = ''
       for (const res of resList) {
         for (const info of this.huangeList) {
           if (res === info.level) {
@@ -698,27 +725,13 @@ export default {
           }
         }
       }
-      for (const item of list) {
-        msg += `<div class="${this.getColor(item.level)}">抽到${item.level}品质服装一件, ${item.name}</div>`
-      }
-      this.$message({ dangerouslyUseHTMLString: true, message: msg })
+      this.renderAlert(list)
     },
     // 流光抽奖公用方法
     liuguangCommon(status) {
-      var numList = []
+      const numList = this.getRandomNumber(status)
       const resList = []
-      if (status === 'single') {
-        numList.push(Math.floor(Math.random() * 10000) / 100)
-      } else if (status === 'three') {
-        for (let i = 0; i < 3; i++) {
-          numList.push(Math.floor(Math.random() * 10000) / 100)
-        }
-      } else if (status === 'ten') {
-        for (let i = 0; i < 10; i++) {
-          numList.push(Math.floor(Math.random() * 10000) / 100)
-        }
-      }
-      console.log(numList)
+      // console.log(numList)
       numList.forEach((item, i) => {
         var str = ''
         if (item <= 40.00) {
@@ -752,7 +765,6 @@ export default {
     liuguang(status) {
       const resList = this.liuguangCommon(status)
       const list = []
-      let msg = ''
       for (const res of resList) {
         for (const info of this.liuguangList) {
           if (res === info.level) {
@@ -762,10 +774,7 @@ export default {
           }
         }
       }
-      for (const item of list) {
-        msg += `<div class="${this.getColor(item.level)}">抽到${item.level}品质服装一件, ${item.name}</div>`
-      }
-      this.$message({ dangerouslyUseHTMLString: true, message: msg })
+      this.renderAlert(list)
     }
   }
 }
@@ -777,13 +786,17 @@ export default {
 		margin-bottom: 5px !important;
 	}
 }
-.bg-sy {
-	color: goldenrod !important;
-}
-.bg-ff {
-	color: silver !important;
-}
-.bg-xy {
-	color: burlywood !important;
+
+
+
+
+</style>
+
+<style>
+@media screen and (max-width: 400px) {
+  .lotteryAlert {
+    width: 90% !important;
+  }
 }
 </style>
+
