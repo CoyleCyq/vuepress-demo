@@ -10,5 +10,5 @@ features:
   details: NodeJS 常用 API 学习笔记, 知识备忘
 - title: Linux 
   details:  Linux 学习笔记, 安装教程
-footer: MIT Licensed | Copyright © 2019-present coyle
+footer: MIT Licensed | Copyright © 2019-present
 ---

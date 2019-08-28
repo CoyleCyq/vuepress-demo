@@ -44,7 +44,7 @@
       class="footer"
       v-if="data.footer"
     >
-      {{ data.footer }}
+      {{ data.footer }} <a class="Copyright" target="_blank" title="http://www.beian.miit.gov.cn" href="http://www.beian.miit.gov.cn">粤ICP备18008408号</a> 
     </div>
   </main>
 </template>
