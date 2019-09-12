@@ -3,7 +3,8 @@
     <div class="title"><b>国服闪耀暖暖竞技场兑换计算</b></div>
     <hr class="mhr">
     <div class="showTime">{{ getTitle }}</div>
-    <!-- <p><button onclick="saveSettings()">保存设置</button><button onclick="loadSettings()">读取设置</button></p> -->
+    <el-button type="primary" @click="saveSetting">保存设置</el-button>
+    <el-button type="primary" @click="loadSetting">读取设置</el-button>
     <!-- 表格区域 -->
     <div id="table">
       <el-table ref="table" :data="config.clothesInfo" size="mini" stripe @row-click="rowClick">
@@ -353,6 +354,24 @@ export default {
         this.result.calcres = false
       }
       this.result.needPay = this.result.needBuy * this.config.price
+    },
+    // 保存配置
+    saveSetting() {
+      let settingConfig = {
+        config: this.config,
+        form: this.form,
+        result: this.result
+      }
+      localStorage.jjcSetting = JSON.stringify(settingConfig)
+      this.$message.success('保存成功')
+    },
+    loadSetting() {
+      if (localStorage.jjcSetting) {
+        let settingConfig = JSON.parse(localStorage.jjcSetting)
+        this.config = settingConfig.config
+        this.form = settingConfig.form
+        this.result = settingConfig.result
+      } 
     }
   }
 }
