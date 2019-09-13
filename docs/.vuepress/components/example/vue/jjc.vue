@@ -1,8 +1,9 @@
 <template>
   <div class="container">
-    <div class="title"><b>国服闪耀暖暖竞技场兑换计算</b></div>
-    <hr class="mhr">
+    <div class="title"><b>国服闪暖JJC兑换计算</b></div>
+    <br>
     <div class="showTime">{{ getTitle }}</div>
+    <br>
     <el-button type="primary" @click="saveSetting">保存设置</el-button>
     <el-button type="primary" @click="loadSetting">读取设置</el-button>
     <!-- 表格区域 -->
@@ -164,7 +165,8 @@ export default {
         packageInfo: [ // 礼包信息
           { name: '稀有钥匙礼包', price: 10, amount: 0, max: 10 },
           { name: '记忆钥匙-稀有', price: 10, amount: 0, max: 15 },
-          { name: '记忆钥匙-普通', price: 4, amount: 0, max: 50 }
+          { name: '记忆钥匙-普通', price: 4, amount: 0, max: 50 },
+          { name: '礼赞印象礼包', price: 50, amount: 0, max: 9999 }
         ],
         itemName: '礼赞之花', // 兑换道具名称
         price: 10, // 购买次数需要消耗的钻石
@@ -455,7 +457,7 @@ a {
 
 @media screen and (max-width: 480px) {
   .container {
-    width: 90%;
+    width: 100%;
   }
 }
 </style>
