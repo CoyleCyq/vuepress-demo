@@ -1,26 +1,26 @@
 // 将会被自动应用的全局样式文件，会生成在最终的 CSS 文件结尾，具有比默认样式更高的优先级。
-.content pre{
+.content__default pre{
   margin: 0!important;
   border-radius: 0 !important;
 }
-.content code{
+.content__default code{
   font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
   padding: 2px 4px;
   color: #d14 !important; 
   border: 1px solid #e1e1e8;
   border-radius: 3px;
 }
-.content pre code{
+.content__default pre code{
   color: #fff !important;
   border: none;
 }
-.content h3 {
+.content__default h3 {
   margin: 52px 0 1.2em;
   line-height: 1.2;
   position: relative;
 }
 
-.content h2:before, .content h3:before {
+.content__default h2:before, .content__default h3:before {
   content: "";
   display: block;
   margin-top: -91px;
@@ -28,7 +28,7 @@
   visibility: hidden;
 }
 
-.content h2 {
+.content__default h2 {
   margin: 45px 0 0.8em;
   padding-bottom: 0.7em;
   border-bottom: 1px solid #ddd;

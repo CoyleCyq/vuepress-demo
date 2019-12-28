@@ -18,7 +18,6 @@
     - [tr属性方法](tr属性方法)
     - [td属性方法](#td属性方法)
 
-<src-MetaChange></src-MetaChange>
 
 ## 什么是DOM
 `DOM`是`Document Object Model`（文档对象模型）的缩写，是针对`HTML`和`XML`文档的一个`API`。`DOM`描绘了一个层次化的节点树，通过`DOM`，我们可以访问所有的`HTML`元素，连同它们所包含的文本和属性。可以对其中的内容进行修改和删除，同时也可以创建新的元素

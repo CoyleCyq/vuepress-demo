@@ -10,7 +10,6 @@
 - [ECMAscript5新增](#ECMAscript5新增)
 - [ASCII码和字符集](#ASCII码和字符集)
 
-<src-MetaChange></src-MetaChange>
 
 ## 了解字符串
 字符串就是一串字符，由双（单）引号括起来。

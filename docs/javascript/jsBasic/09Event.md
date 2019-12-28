@@ -15,7 +15,6 @@
     - [拖拽的原理](#拖拽的原理)
     - [拖拽的思路](#拖拽的思路)
 
-<src-MetaChange></src-MetaChange>
 
 ## 什么是事件
 事件是可以被`JavaScript`侦测到的行为。网页中的每个元素都可以产生某些可以触发`JavaScript`函数的事件

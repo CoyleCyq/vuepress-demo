@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="jjc-container">
     <div class="title"><b>国服闪暖JJC兑换计算</b></div>
     <br>
     <div class="showTime">{{ getTitle }}</div>
@@ -8,7 +8,7 @@
     <el-button type="primary" @click="loadSetting">读取设置</el-button>
     <!-- 表格区域 -->
     <div id="table">
-      <el-table ref="table" :data="config.clothesInfo" size="mini" stripe @row-click="rowClick">
+      <el-table ref="table" class="jjcTable" :data="config.clothesInfo" size="mini" stripe @row-click="rowClick">
         <el-table-column
           label="部位"
           width="100px"
@@ -142,25 +142,24 @@ export default {
     return {
       // 配置信息
       config: {
-        timeEnd: Date.parse('2019-12-08'), // 结束时间
+        timeEnd: Date.parse('2020-04-12'), // 结束时间
         timeNow: new Date().getTime(), // 现在时间
         clothesInfo: [ // 服装信息
-          { type: '特殊-翅膀', name: '记忆残翼', require: '永恒的传奇', need: 1188, checked: false },
-          { type: '手持物', name: '温柔祷歌', require: '颠覆未来之王3星', need: 792, checked: false },
-          { type: '美瞳', name: '蝴蝶之梦', require: '颠覆未来之王2星', need: 528, checked: false },
-          { type: '手套', name: '缠绕爱恨', require: '颠覆未来之王1星', need: 528, checked: false },
-          { type: '设计师之影', name: '精灵哀歌', require: '颠覆未来之王1星', need: 1500, checked: false },
-          { type: '真我复苏', name: '精灵哀歌', require: '颠覆未来之王1星', need: 750, checked: false },
-          { type: '影之召唤', name: '精灵哀歌', require: '颠覆未来之王1星', need: 750, checked: false, qty: 1 },
-          { type: '连衣裙', name: '梦与蝶之吻', require: '灵感重构大师3星', need: 990, checked: false },
-          { type: '唇妆', name: '轻吟悲歌', require: '灵感重构大师2星', need: 264, checked: false },
-          { type: '鞋子', name: '精灵枷锁', require: '灵感重构大师1星', need: 528, checked: false },
-          { type: '特殊-颈饰', name: '月光束缚', require: '记忆创造者3星', need: 330, checked: false },
-          { type: '底妆', name: '残翼', require: '记忆创造者2星', need: 198, checked: false },
-          { type: '发型', name: '沉默的记忆', require: '记忆创造者1星', need: 528, checked: false },
-          { type: '袜子', name: '岁月纠缠', require: '自由搭配师3星', need: 264, checked: false },
-          { type: '眉妆', name: '清浅伤痕', require: '自由搭配师2星', need: 165, checked: false },
-          { type: '耳饰', name: '精灵之泪', require: '自由搭配师1星', need: 198, checked: false }
+          { type: '特殊', name: '气气瓶瓶', require: '永恒的传奇', need: 1188, checked: false },
+          { type: '手持物', name: '动感波浪', require: '颠覆未来之王3星', need: 1188, checked: false },
+          { type: '特殊', name: '隐形守护', require: '颠覆未来之王2星', need: 660, checked: false },
+          { type: '设计师之影', name: '蒸汽幻想', require: '颠覆未来之王1星', need: 1500, checked: false },
+          { type: '真我复苏', name: '蒸汽幻想', require: '颠覆未来之王1星', need: 750, checked: false },
+          { type: '影之召唤', name: '蒸汽幻想', require: '颠覆未来之王1星', need: 750, checked: false, qty: 1 },
+          { type: '连衣裙', name: '液态重组', require: '灵感重构大师3星', need: 990, checked: false },
+          { type: '美瞳', name: '紫黛珊瑚', require: '灵感重构大师2星', need: 264, checked: false },
+          { type: '鞋子', name: '深海潜游', require: '灵感重构大师1星', need: 528, checked: false },
+          { type: '特殊', name: '区域封锁', require: '记忆创造者3星', need: 330, checked: false },
+          { type: '底妆', name: '深潜幻影', require: '记忆创造者2星', need: 198, checked: false },
+          { type: '发型', name: '流动韵律', require: '记忆创造者1星', need: 528, checked: false },
+          { type: '袜子', name: '浮光泡沫', require: '自由搭配师3星', need: 264, checked: false },
+          { type: '唇妆', name: '浅海夕照', require: '自由搭配师2星', need: 165, checked: false },
+          { type: '手套', name: '黄色预警', require: '自由搭配师1星', need: 198, checked: false }
         ],
         packageInfo: [ // 礼包信息
           { name: '稀有钥匙礼包', price: 10, amount: 0, max: 10 },
@@ -379,22 +378,20 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.container {
+<style lang="scss">
+.jjc-container {
   width: 500px;
   margin: 0 auto;
-  #table {
-    margin-bottom: 10px;
+
+  .jjcTable {
     table {
-      margin: 0 !important;
+      border-collapse: collapse;
     }
-    .el-table {
-      .el-table__header {
-        margin: 0 !important;
-      }
-      .cell {
-        line-height: 1.15 !important;
-      }
+    .el-table__header {
+      margin-bottom: 0 !important;
+    }
+    .el-table__body {
+      margin-top: 0 !important;
     }
   }
   .total {
@@ -448,11 +445,6 @@ div.title {
 
 hr.mhr {
 	border: 1px dashed #2E9FCC;
-}
-
-a {
-	text-decoration:none;
-	color:#3377ff;
 }
 
 @media screen and (max-width: 480px) {

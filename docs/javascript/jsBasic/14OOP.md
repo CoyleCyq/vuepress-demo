@@ -17,7 +17,6 @@
 - [匿名函数](#匿名函数)
 - [ES5对象扩展](#ES5对象扩展)
 
-<src-MetaChange></src-MetaChange>
 
 ## 了解面向对象
 面向对象是利用对象进行编程的一种思想`（Object-oriented programming,缩写:OOP）`

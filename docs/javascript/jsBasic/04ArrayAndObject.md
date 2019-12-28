@@ -21,7 +21,6 @@
   - [内建对象](#内建对象)
   - [apply和call](#apply和call)
 
-<src-MetaChange></src-MetaChange>
 
 ## 数组
 ### 什么叫数组

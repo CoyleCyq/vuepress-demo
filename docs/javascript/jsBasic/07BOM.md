@@ -8,7 +8,6 @@
     - [属性对象](#属性对象)
 - [window对象常用事件](#window对象常用事件)
 
-<src-MetaChange></src-MetaChange>
 
 ## BOM的概念
 `BOM`是`Browser Object Model`（浏览器对象模型）的缩写，提供与浏览器窗口进行交互的对象。`JavaScript`语法的标准化组织是E`CMA`，`DOM`的标准化组织是`W3C`, 而`BOM`缺乏标准。这也是各种浏览器不兼容的根源所在

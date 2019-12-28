@@ -75,6 +75,11 @@ module.exports = {
       "/linux/": [
         "introduction",
         {
+          title: "基础",
+          collapsable: false,
+          children: genSidebarConfig("linux/basic", true)
+        },
+        {
           title: "安装",
           collapsable: false,
           children: genSidebarConfig("linux/install", true)

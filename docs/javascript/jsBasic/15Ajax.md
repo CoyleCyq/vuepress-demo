@@ -17,7 +17,6 @@
     - [使用](#使用)
     - [应用](#应用)
 
-<src-MetaChange></src-MetaChange>
 
 ## 了解AJAX
 - `AJAX` : `Asynchronous Javascript And Xml`，Ajax 技术的核心是`XMLHttpRequest`对象（简称XHR），这是由微软首先引入的一个特性，其他浏览器提供商后来都提供了相同的实现

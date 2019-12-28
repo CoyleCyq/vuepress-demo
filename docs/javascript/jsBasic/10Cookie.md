@@ -12,7 +12,6 @@
 - [cookie的封装](#cookie的封装)
 - [XSS攻击](#XSS攻击)
 
-<src-MetaChange></src-MetaChange>
 
 ## 网络知识
 
