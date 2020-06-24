@@ -33,6 +33,10 @@ module.exports = {
         link: '/tools/introduction'
       },
       {
+        text: '组件',
+        link: '/components/introduction'
+      },
+      {
         text: '了解更多',
         items: [
           { text: 'Github', link: 'https://github.com/CoyleCyq' },
@@ -99,6 +103,14 @@ module.exports = {
           title: '小工具',
           collapsable: false,
           children: genSidebarConfig("tools/mytools", true)
+        }
+      ],
+      '/components/': [
+        "introduction",
+        {
+          title: 'UI',
+          collapsable: false,
+          children: genSidebarConfig("components/UI", true)
         }
       ]
     }
